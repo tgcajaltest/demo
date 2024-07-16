@@ -310,6 +310,9 @@ def create_marker(df, id_conjunto:int, col):
 
         # Dataframe con datos de conjunto a HTML para popup
         html_table = df[["ONI","Rango","Tipo"]].to_html(index=False, classes="table table-striped table-hover table-condensed table-responsive")
+        html_table = html_table.replace('<table ', '<table style="text-align: center;" ')
+        html_table = html_table.replace('<th>', '<th style="text-align: center;">')
+        html_table = html_table.replace('<td>', '<td style="text-align: center;">')
         
         # Concatenar título con tabla
         html = html_title + html_table
