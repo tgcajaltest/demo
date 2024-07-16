@@ -71,7 +71,7 @@ else:
     # Agregar opción de descarga
     st.write("Descargas")
     st.download_button(
-        label="Download HTML file",
+        label="Mapa (HTML)",
         data=map_html,
         file_name="mapa.html",
         mime="text/html")
