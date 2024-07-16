@@ -19,7 +19,7 @@ df3 = pd.read_csv("3.csv")
 df3 = df3.loc[:,~df3.columns.str.contains("^Unnamed")]
 
 # Capa delegación poniente
-capa = gpd.read_file("poniente.geojson")
+capa = gpd.read_file("poniente.json")
 
 # Definir coordenadas centrales
 center_lat = capa.geometry.centroid.y.mean()
