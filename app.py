@@ -11,9 +11,12 @@ import funciones as f
 
 st.set_page_config(page_title="Demo", page_icon=None, layout="wide", initial_sidebar_state="auto", menu_items=None)
 
-df1 = pd.read_excel("cuadrantes_.xlsx")
-df2 = pd.read_excel("medios_.xlsx")
-df3 = pd.read_excel("conjuntos_.xlsx")
+df1 = pd.read_csv("1.csv")
+df1 = df1.loc[:,~df1.columns.str.contains("^Unnamed")]
+df2 = pd.read_csv("2.csv")
+df2 = df2.loc[:,~df2.columns.str.contains("^Unnamed")]
+df3 = pd.read_csv("3.csv")
+df3 = df3.loc[:,~df3.columns.str.contains("^Unnamed")]
 
 # Capa delegación poniente
 capa = gpd.read_file("poniente.geojson")
