@@ -67,3 +67,8 @@ else:
 
     # Mostrar mapa
     components.html(map_html, width=1200, height=750)
+    
+    # Agregar opción de descarga
+    st.write("Descargas")
+    st.download_button("Mapa (html)", data=map_html)
+    st.download_button("Conjuntos asignados (csv)", data="3.csv")
