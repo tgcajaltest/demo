@@ -309,7 +309,7 @@ def create_marker(df, id_conjunto:int, col):
         html_title = "<h4><b>Conjunto "+str(id_conjunto)+"</b><br><b>Vehículo: "+str(tipo_medio)+" "+str(placa)+"</b></h4>"
 
         # Dataframe con datos de conjunto a HTML para popup
-        html_table = df[["Id_agente","ONI","Rango","Tipo"]].to_html(index=False, classes="table table-striped table-hover table-condensed table-responsive")
+        html_table = df[["ONI","Rango","Tipo"]].to_html(index=False, classes="table table-striped table-hover table-condensed table-responsive")
         
         # Concatenar título con tabla
         html = html_title + html_table
